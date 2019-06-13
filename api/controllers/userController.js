@@ -20,9 +20,19 @@ exports.create_a_setting = function(req, res) {
 };
 
 exports.update_a_setting = function(req, res) {
-  User.findOneAndUpdate({_id: req.params.settingId}, req.body, {new: true}, function(err, task) {
+  User.findOneAndUpdate({_id: req.params.settingId}, req.body, {new: true}, function(err, setting) {
     if (err)
       res.send(err);
     res.json(setting);
+  });
+};
+
+exports.delete_a_setting = function(req, res) {
+  User.remove({
+    _id: req.params.settingId
+  }, function(err, setting) {
+    if (err)
+      res.send(err);
+    res.json({ message: 'Task successfully deleted' });
   });
 };

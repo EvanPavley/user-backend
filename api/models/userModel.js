@@ -13,7 +13,7 @@ var UserSchema = new Schema({
   },
   updates: {
     type: Boolean,
-    default: ['true']'
+    default: true
   },
   location: {
     type: String,

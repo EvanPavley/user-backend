@@ -9,16 +9,17 @@ var express = require('express'),
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/Userdb');
 
+// using cors
+var cors = require('cors')
+app.use(cors());
+app.options('*', cors());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-
 var routes = require('./api/routes/userRoutes'); //importing route
 routes(app); //register the route
 
-
 app.listen(port);
-
 
 console.log('User settings API server started on: ' + port);

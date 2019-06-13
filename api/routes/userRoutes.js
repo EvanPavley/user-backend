@@ -4,8 +4,10 @@ module.exports = function(app) {
 
   // user Routes
   app.route('/userSettings')
-    .get(user.list_all_settings);
-    .post(user.create_a_setting);
-    .put(user.update_a_setting);
+    .get(user.list_all_settings)
+    .post(user.create_a_setting)
 
+  app.route('/userSettings/:settingId')
+    .put(user.update_a_setting)
+    .delete(user.delete_a_setting)
 };
