@@ -1,4 +1,6 @@
 # user-backend
+run '$mongod --port 3002'
+and run '$npm run start'
 
 ## Tech used:
 - Node JS: To create the server.
