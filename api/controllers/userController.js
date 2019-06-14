@@ -33,6 +33,6 @@ exports.delete_a_setting = function(req, res) {
   }, function(err, setting) {
     if (err)
       res.send(err);
-    res.json({ message: 'Task successfully deleted' });
+    res.json({ message: 'successfully deleted' });
   });
 };

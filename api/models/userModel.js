@@ -12,14 +12,13 @@ var UserSchema = new Schema({
   name: {
     type: String,
     required: 'Please enter your name',
-    minlength: 1,
+    minlength: 2,
     maxlength: 50,
   },
   email: {
     type: String,
     required: 'Please enter your email',
     validate: [validateEmail, 'Please fill a valid email address'],
-    minlength: 1,
     maxlength: 50,
   },
   updates: {
@@ -33,17 +32,18 @@ var UserSchema = new Schema({
   bio: {
     type: String,
     required: 'Please enter a bio',
-    minlength: 1,
+    minlength: 3,
     maxlength: 250,
   },
   password: {
     type: String,
     required: 'Please enter your password',
-    minlength: 1,
+    minlength: 2,
     maxlength: 50,
   },
 });
 
+//runs the validations on Update
 UserSchema.pre('findOneAndUpdate', function(next) {
   this.options.runValidators = true;
   next();
