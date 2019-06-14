@@ -1,3 +1,11 @@
+/*
+User Model:
+The model for the userSettings backend using Mongoose
+***
+The code below defines the typical data set that will be posted to the database.
+It also has validations that prevent any blank input feilds from being sustained in the database
+*/
+
 'use strict';
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
