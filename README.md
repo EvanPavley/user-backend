@@ -1,4 +1,4 @@
-# User Settings Project Front-end
+# User Settings Project Back-end
 
 <img alt="User-setting-image" src="images/User-setting-image.png" width="320px" height="200px">
 
